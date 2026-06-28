@@ -25,9 +25,15 @@ class MainScreen extends StatelessWidget {
     final controller = Get.put(TabIndexController());
     return Obx(
       () => Scaffold(
+        backgroundColor: kOffWhite,
         body: Stack(
           children: [
-            pageList[controller.tabIndex],
+            Container(
+              height: height,
+              width: width,
+              color: kOffWhite,
+              child: pageList[controller.tabIndex],
+            ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
