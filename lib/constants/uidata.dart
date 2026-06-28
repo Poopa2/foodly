@@ -3,6 +3,7 @@ List<dynamic> categories = [
     "_id": "6537ece708ff5b7de97d0695",
     "title": "Fried Rice",
     "value": "fried_rice",
+    "emoji": "🍚",
     "imageUrl":
         "https://cdn.wikimg.net/en/zeldawiki/images/e/e4/TotK_Crunchy_Fried_Rice_Icon.png",
     "createdAt": "2023-10-24T16:12:23.571Z",
@@ -13,6 +14,7 @@ List<dynamic> categories = [
     "_id": "65310f3381e4d98d60b093c5",
     "title": "Curry",
     "value": "curry",
+    "emoji": "🍛",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/images%2F1743821081216_curry.png?alt=media&token=a85c9566-1ba6-4fca-9343-dc6bda70d192",
     "__v": 0,
@@ -21,6 +23,7 @@ List<dynamic> categories = [
     "_id": "6531206cbbe4998e90af3feb",
     "title": "Pizza",
     "value": "pizza",
+    "emoji": "🍕",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fpizza.png?alt=media&token=62ee0980-dbce-41ec-91e7-42f476e9a710",
     "__v": 0,
@@ -29,6 +32,7 @@ List<dynamic> categories = [
     "_id": "6531209dbbe4998e90af3fef",
     "title": "Pasta",
     "value": "pasta",
+    "emoji": "🍝",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fpasta.png?alt=media&token=70bea526-af84-45a5-bb8d-f71aa2974e94",
     "__v": 0,
@@ -37,6 +41,7 @@ List<dynamic> categories = [
     "_id": "653120babbe4998e90af3ff1",
     "title": "Beverages",
     "value": "beverages",
+    "emoji": "🥤",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fbeverages.png?alt=media&token=b6a43ec2-03c0-4286-a574-94423a64e7ff",
     "__v": 0,
@@ -45,6 +50,7 @@ List<dynamic> categories = [
     "_id": "65312084bbe4998e90af3fed",
     "title": "Burgers",
     "value": "burgers",
+    "emoji": "🍔",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fburgers.png?alt=media&token=5d8a74b7-11b9-480a-9a2a-41d015827bca",
     "__v": 0,
@@ -53,6 +59,7 @@ List<dynamic> categories = [
     "_id": "65310efb81e4d98d60b093c3",
     "title": "Chicken",
     "value": "chicken",
+    "emoji": "🍗",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fchicken.png?alt=media&token=5a9302fb-3689-4923-9de9-51798d344399",
     "__v": 0,
@@ -61,6 +68,7 @@ List<dynamic> categories = [
     "_id": "653120e1bbe4998e90af3ff3",
     "title": "More",
     "value": "more",
+    "emoji": "📱",
     "imageUrl":
         "https://firebasestorage.googleapis.com/v0/b/flutter-foodly-final-7d6ce.appspot.com/o/foodly_categories%2Fmore.png?alt=media&token=b085c6aa-3101-4aae-9eb8-1edeadc1ae4f",
     "__v": 0,
@@ -351,8 +359,7 @@ const profile = {
   "uid": "4NmOkCbvu7ToaBS9ZR1UVpv0G1g2",
   "address": [],
   "userType": "Vendor",
-  "profile":
-      "https://cdn-icons-png.flaticon.com/512/180/180661.png",
+  "profile": "https://cdn-icons-png.flaticon.com/512/180/180661.png",
   "updatedAt": "2023-10-24T11:02:28.215Z",
 };
 
