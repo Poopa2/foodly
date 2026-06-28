@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,14 +12,14 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.75,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(30.r),
           bottomRight: Radius.circular(30.r),
         ),
         child: Container(
-          width: double.infinity,
+          width: width,
           color: kOffWhite,
           child: SingleChildScrollView(child: containerContent),
         ),

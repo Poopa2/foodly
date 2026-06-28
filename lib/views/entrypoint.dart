@@ -28,11 +28,11 @@ class MainScreen extends StatelessWidget {
         backgroundColor: kOffWhite,
         body: Stack(
           children: [
-            Container(
-              height: height,
-              width: width,
-              color: kOffWhite,
-              child: pageList[controller.tabIndex],
+            Positioned.fill(
+              child: Container(
+                color: kOffWhite,
+                child: pageList[controller.tabIndex],
+              ),
             ),
             Align(
               alignment: Alignment.bottomCenter,
