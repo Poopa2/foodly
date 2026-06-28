@@ -1,11 +1,24 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:foodly/constants/constants.dart';
 import 'package:foodly/controllers/tab_index_controller.dart';
+import 'package:foodly/views/cart/cart_page.dart';
+import 'package:foodly/views/home/home_page.dart';
+import 'package:foodly/views/profile/profile_page.dart';
+import 'package:foodly/views/search/search_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  MainScreen({super.key});
+
+  List<Widget> pageList = const [
+    HomePage(),
+    SearchPage(),
+    CartPage(),
+    ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +27,7 @@ class MainScreen extends StatelessWidget {
       () => Scaffold(
         body: Stack(
           children: [
-            Container(height: height, width: width, color: kOffWhite),
+            pageList[controller.tabIndex],
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
