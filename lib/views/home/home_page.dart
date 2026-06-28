@@ -4,10 +4,14 @@ import 'package:foodly/common/custom_appbar.dart';
 import 'package:foodly/common/custom_container.dart';
 import 'package:foodly/common/heading.dart';
 import 'package:foodly/constants/constants.dart';
+import 'package:foodly/constants/foods_data.dart';
+import 'package:foodly/constants/uidata.dart';
 import 'package:foodly/views/home/all_fastest_foods_page.dart';
 import 'package:foodly/views/home/all_nearby_restaurants.dart';
 import 'package:foodly/views/home/recommendations_page.dart';
 import 'package:foodly/views/home/widgets/category_list.dart';
+import 'package:foodly/views/home/widgets/food_list.dart';
+import 'package:foodly/views/home/widgets/nearby_restaurants_list.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,43 +27,56 @@ class HomePage extends StatelessWidget {
       ),
       body: SafeArea(
         child: CustomContainer(
-          containerContent: Column(
-            children: [
-              const CategoryList(),
-              SizedBox(height: 10.h),
-              Heading(
-                text: "Nearby Restaurants",
-                onTap: () {
-                  Get.to(
-                    () => const AllNearbyRestaurants(),
-                    transition: Transition.cupertino,
-                    duration: const Duration(milliseconds: 900),
-                  );
-                },
-              ),
-              SizedBox(height: 10.h),
-              Heading(
-                text: "Try Something New",
-                onTap: () {
-                  Get.to(
-                    () => const AllFastestFoods(),
-                    transition: Transition.cupertino,
-                    duration: const Duration(milliseconds: 900),
-                  );
-                },
-              ),
-              SizedBox(height: 10.h),
-              Heading(
-                text: "Food closer to you",
-                onTap: () {
-                  Get.to(
-                    () => const RecommendationsPage(),
-                    transition: Transition.cupertino,
-                    duration: const Duration(milliseconds: 900),
-                  );
-                },
-              ),
-            ],
+          containerContent: SingleChildScrollView(
+            child: Column(
+              children: [
+                const CategoryList(),
+                SizedBox(height: 10.h),
+                Heading(
+                  text: "Nearby Restaurants",
+                  onTap: () {
+                    Get.to(
+                      () => const AllNearbyRestaurants(),
+                      transition: Transition.cupertino,
+                      duration: const Duration(milliseconds: 900),
+                    );
+                  },
+                ),
+                SizedBox(height: 10.h),
+                NearbyRestaurantsList(
+                  restaurants: restaurants.take(2).toList(),
+                ),
+                SizedBox(height: 15.h),
+                Heading(
+                  text: "Try Something New",
+                  onTap: () {
+                    Get.to(
+                      () => const AllFastestFoods(),
+                      transition: Transition.cupertino,
+                      duration: const Duration(milliseconds: 900),
+                    );
+                  },
+                ),
+                SizedBox(height: 10.h),
+                FoodList(foods: foodsList),
+                SizedBox(height: 15.h),
+                Heading(
+                  text: "Food closer to you",
+                  onTap: () {
+                    Get.to(
+                      () => const RecommendationsPage(),
+                      transition: Transition.cupertino,
+                      duration: const Duration(milliseconds: 900),
+                    );
+                  },
+                ),
+                SizedBox(height: 10.h),
+                NearbyRestaurantsList(
+                  restaurants: restaurants.skip(2).take(1).toList(),
+                ),
+                SizedBox(height: 20.h),
+              ],
+            ),
           ),
         ),
       ),
